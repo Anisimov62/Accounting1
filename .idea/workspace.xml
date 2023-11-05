@@ -4,30 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="094040ba-a631-4cc6-b447-bde8cc446ab4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/access/LogPassword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/access/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/companys/Company.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/companys/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/companys/Files.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/companys/Functions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/companys/Leadership.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/companys/Library.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/companys/Serialized.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/companys/Team.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mains/MainCompany.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mains/MainEmployee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mains/MainFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mains/MainTeam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mains/Options.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mains/Report.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mains/Search.java" afterDir="false" />
+    <list default="true" id="094040ba-a631-4cc6-b447-bde8cc446ab4" name="Changes" comment="Initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mains/MainCompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/control/CompanyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mains/MainEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/control/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mains/MainFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/control/FunctionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mains/MainTeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/control/TeamController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mains/Options.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/control/Options.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mains/Report.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/control/Report.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mains/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/control/Search.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,17 +42,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/Accounting/src/main/java/org/example/mains",
-    "onboarding.tips.debug.path": "C:/Users/User/IdeaProjects/Accounting/src/main/java/org/example/Main.java",
-    "settings.editor.selected.configurable": "inlay.hints"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/Accounting&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/User/IdeaProjects/Accounting/src/main/java/org/example/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\Accounting\src\main\java\org\example\mains" />
@@ -85,9 +71,31 @@
       <option name="presentableId" value="Default" />
       <updated>1698868225680</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1699280796315</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699280796315</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="05" />
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
 </project>
