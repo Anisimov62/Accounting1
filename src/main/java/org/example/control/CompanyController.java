@@ -22,7 +22,6 @@ public class CompanyController {
     public Search getSearch() {
         return search;
     }
-
     public void setSearch(Search search) {
         this.search = search;
     }
@@ -31,34 +30,30 @@ public class CompanyController {
         return scanner;
     }
 
-    public EmployeeController getMainEmployee() {
+    public EmployeeController getEmployeeController() {
         return employeeController;
     }
-
-    public void setMainEmployee(EmployeeController employeeController) {
+    public void setEmployeeController(EmployeeController employeeController) {
         this.employeeController = employeeController;
     }
 
-    public TeamController getMainTeam() {
+    public TeamController getTeamController() {
         return teamController;
     }
-
-    public void setMainTeam(TeamController teamController) {
+    public void setTeamController(TeamController teamController) {
         this.teamController = teamController;
     }
 
-    public FunctionController getMainFunction() {
+    public FunctionController getFunctionController() {
         return functionController;
     }
-
-    public void setMainFunction(FunctionController functionController) {
+    public void setFunctionController(FunctionController functionController) {
         this.functionController = functionController;
     }
 
     public Report getReport() {
         return report;
     }
-
     public void setReport(Report report) {
         this.report = report;
     }
@@ -66,28 +61,37 @@ public class CompanyController {
     public Company getCompany() {
         return company;
     }
-
     public void setCompany(Company company) {
         this.company = company;
     }
 
     public  Company createCompany() {
         System.out.println("Введите название кампании:");
-        String campaignName = scanner.nextLine();
+        String companyName = scanner.nextLine();
         this.company = new Company();
         teamController.setCompany(company);
         employeeController.setCompany(company);
         functionController.setCompany(company);
         report.setCompany(company);
         search.setCompany(company);
-        Serialized.serialized(company, campaignName + company.hashCode());
-        System.out.println("Ваша кампания: " + campaignName + " создана\n");
+        Serialized.serialized(company, companyName + company.hashCode());
+        System.out.println("Ваша кампания: " + companyName + " создана\n");
         return company;
     }
 
     public void loadCompany(String file) {
         Serialized.deserialized(file);
     }
+//    public String loadCompany() {
+//        JFileChooser fileOpen = new JFileChooser("Company");
+//        int ret = fileOpen.showDialog(null, "Открыть файл");
+//        if (ret == JFileChooser.APPROVE_OPTION) {
+//            return fileOpen.getSelectedFile().getAbsolutePath();
+//        } else {
+//            System.out.println("Ошибка");
+//            System.exit(1);
+//        }
+//        return null;
 
     public void editCompany() {
 

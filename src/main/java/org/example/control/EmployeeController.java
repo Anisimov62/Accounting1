@@ -5,27 +5,24 @@ import org.example.companys.Employee;
 
 
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class EmployeeController implements Serializable {
     private final Scanner scanner = new Scanner(System.in);
     private Company company;
-
+    private Employee employee;
     public EmployeeController() {
 
     }
 
-    public Company getCompany() {
-        return company;
-    }
-
-    public void setCompany(Company company) {
-        this.company = company;
-    }
+    public Company getCompany() {return company;}
+    public void setCompany(Company company) {this.company = company;}
 
     private void createEmployee(String surname, String name, String middleName) {
         Employee employee = new Employee(surname, name, middleName);
-        company.library.addEmployee(employee);
+        company.documents.addEmployee(employee);
     }
 
     public void deleteEmployee() {}
@@ -33,7 +30,12 @@ public class EmployeeController implements Serializable {
     public void editSurname() {}
     public void editName() {}
     public void editMiddleName() {}
-    public void editDateOfBirth() {}
+
+    public void editDateOfBirthday(String dateOfBirthday) {
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("дд.мм.гггг");
+        LocalDate localDate = LocalDate.parse(dateOfBirthday, dateTimeFormatter);
+        this.employee.setDateOfBirthday(localDate);}
+
     public void editSex() {}
     public void editTelephone() {}
     public void editTeam() {}

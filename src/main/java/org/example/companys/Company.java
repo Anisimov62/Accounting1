@@ -2,12 +2,12 @@ package org.example.companys;
 import java.io.Serializable;
 
 public class Company implements Serializable {
-    public Object library;
+//    public Object documents;
     private String companyName;
         public Company() {
             this.companyName = companyName;
         }
-//        public Data data = new Data();
+        public Documents documents = new Documents();
         public String getCompanyName() {
             return companyName;
         }

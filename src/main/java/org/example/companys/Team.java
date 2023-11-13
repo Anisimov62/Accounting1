@@ -2,7 +2,6 @@ package org.example.companys;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.List;
 
     public class Team implements Serializable {
 
@@ -12,7 +11,7 @@ import java.util.List;
         private Employee boss;
 
 
-        private final List<Employee> employee = new ArrayList<>();
+        private final ArrayList<Employee> employee = new ArrayList<>();
 
         public Team(String teamName) {
             numberCreation++;
@@ -27,15 +26,13 @@ import java.util.List;
         public void setEmployee(Employee employee) {
             this.employee.add(employee);
         }
-
-        public List<Employee> getEmployee() {
+        public ArrayList<Employee> getEmployee() {
             return employee;
         }
 
         public Employee getBoss() {
             return boss;
         }
-
         public void setBoss(Employee boss) {
             this.boss= boss;
         }
@@ -43,7 +40,6 @@ import java.util.List;
         public String getTeamName() {
             return teamName;
         }
-
         public void setTeamName(String teamName) {
             this.teamName = teamName;
         }
@@ -55,6 +51,6 @@ import java.util.List;
                     " Руководитель: " + boss;
 
         }
-    }
+      }
 
 

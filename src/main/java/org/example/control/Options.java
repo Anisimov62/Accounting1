@@ -1,6 +1,7 @@
 package org.example.control;
 
 import org.example.companys.Company;
+import org.example.companys.Employee;
 
 import java.io.Serializable;
 import java.util.Scanner;
@@ -15,16 +16,16 @@ public class Options implements Serializable {
 
     }
 
-    public void setMainCompany(CompanyController companyController) {
+    public void setCompanyController(CompanyController companyController) {
         this.companyController = companyController;
     }
 
-    public CompanyController getMainCompany() {
+    public CompanyController getCompanyController() {
         return companyController;
     }
 
 
-    public void start() {
+    public void load2() {
         companyOption();
     }
 
@@ -34,9 +35,11 @@ public class Options implements Serializable {
 
     public void companyOption() {
         System.out.println("""
-                1: Новая компания
-                2: Редактировать компанию
-                3: Войти в компанию""");
+                 1-Новая компания;
+                 2-Редактировать компанию;
+                 3-Войти в компанию\
+                """);
+
         switch (scanner.nextInt()) {
             case 1 -> {
                 this.company = companyController.createCompany();
@@ -47,7 +50,7 @@ public class Options implements Serializable {
                 mainOption();
             }
             case 3 -> {
-                companyController.loadCompany("Company");
+                companyController.loadCompany("qwerty777874839");
                 mainOption();
             }
             default -> {
@@ -61,47 +64,48 @@ public class Options implements Serializable {
 
     public void employeeEditOption() {
         System.out.println("""
-                1: Изменить ФИО
-                2: Изменить дату рождения
-                3: Изменить пол
-                4: Изменить телефон
-                5: Изменить отдел
-                6: Изменить должность
-                7: Изменить руководителя
-                8: Изменить зарплату
-                9: Удалить сотрудника""");
+                 1-Изменить ФИО
+                 2-Изменить дату рождения
+                 3-Изменить пол
+                 4-Изменить телефон
+                 5-Изменить отдел
+                 6-Изменить должность
+                 7-Изменить руководителя
+                 8-Изменить зарплату
+                 9-Удалить сотрудника\
+                """);
         switch (scanner.nextInt()) {
             case 1 -> editFioOption();
             case 2 -> {
-                companyController.getMainEmployee().editDateOfBirth();
+                companyController.getEmployeeController().editDateOfBirthday(toString());
                 employeeEditOption();
             }
             case 3 -> {
-                companyController.getMainEmployee().editSex();
+                companyController.getEmployeeController().editSex();
                 employeeEditOption();
             }
             case 4 -> {
-                companyController.getMainEmployee().editTelephone();
+                companyController.getEmployeeController().editTelephone();
                 employeeEditOption();
             }
             case 5 -> {
-                companyController.getMainEmployee().editTeam();
+                companyController.getEmployeeController().editTeam();
                 employeeEditOption();
             }
             case 6 -> {
-                companyController.getMainEmployee().editFunction();
+                companyController.getEmployeeController().editFunction();
                 employeeEditOption();
             }
             case 7 -> {
-                companyController.getMainEmployee().editBoss();
+                companyController.getEmployeeController().editBoss();
                 employeeEditOption();
             }
             case 8 -> {
-                companyController.getMainEmployee().editSalary();
+                companyController.getEmployeeController().editSalary();
                 employeeEditOption();
             }
             case 9 -> {
-                companyController.getMainEmployee().deleteEmployee();
+                companyController.getEmployeeController().deleteEmployee();
                 employeeEditOption();
             }
 
@@ -114,21 +118,22 @@ public class Options implements Serializable {
 
     private void editFioOption() {
         System.out.println("""
-                1: Изменить фамилию
-                2: Изменить имя
-                3: Изменить отчество
-                4: Назад""");
+                 1-Изменить фамилию
+                 2-Изменить имя
+                 3-Изменить отчество
+                 4-Назад\
+                """);
         switch (scanner.nextInt()) {
             case 1 -> {
-                companyController.getMainEmployee().editSurname();
+                companyController.getEmployeeController().editSurname();
                 editFioOption();
             }
             case 2 -> {
-                companyController.getMainEmployee().editName();
+                companyController.getEmployeeController().editName();
                 editFioOption();
             }
             case 3 -> {
-                companyController.getMainEmployee().editMiddleName();
+                companyController.getEmployeeController().editMiddleName();
                 editFioOption();
             }
             case 4 -> employeeEditOption();
@@ -141,15 +146,16 @@ public class Options implements Serializable {
 
     private void mainOption() {
         System.out.println("""
-                1: Отделы
-                2: Должностя
-                3: Сотрдуники
-                4: Отчеты
-                5: Выход из программы""");
+                 1-Отделы
+                 2-Должностя
+                 3-Сотрудники
+                 4-Отчеты
+                 5-Выход из программы\
+                """);
         switch (scanner.nextInt()) {
             case 1 -> teamOption();
             case 2 -> functionOption();
-            case 3 -> employeeEditOption();
+            case 3 -> employeeOption();
             case 4 -> reportOption();
             case 5 -> System.out.println("До свидания!");
             default -> {
@@ -161,9 +167,9 @@ public class Options implements Serializable {
 
     private void teamOption() {
         System.out.println("""
-                1: Список отделов
-                2: Создать отдел
-                3: Назад
+                 1-Список отделов
+                 2-Создать отдел
+                 3-Назад\
                 """);
         switch (scanner.nextInt()) {
             case 1 -> {
@@ -173,7 +179,7 @@ public class Options implements Serializable {
             case 2 -> {
                 System.out.println("Введите название отдела");
                 scanner.nextLine();
-                companyController.getMainTeam().createTeam(scanner.nextLine());
+                companyController.getTeamController().createTeam(scanner.nextLine());
                 System.out.println("Отдел создан!");
                 teamOption();
             }
@@ -187,17 +193,21 @@ public class Options implements Serializable {
 
     private void teamEditOption() {
         System.out.println("""
-                1: Редактировать отдел
-                2: Удалить отдел
-                3: Назад""");
+                 1-Редактировать отдел
+                 2-Удалить отдел
+                 3-Назад\
+                """);
         switch (scanner.nextInt()) {
             case 1 -> {
                 System.out.println("Введите номер отдела который необходимо отредактировать:");
-                companyController.getMainTeam().setTeam(company.library.getTeams().get(companyController.getSearch().searchStateTeam(company.library.getTeams(), scanner.nextInt())));
+                companyController.getTeamController().setTeam(company.documents.getTeams().
+                        get(companyController.getSearch().
+                        searchStateTeam(company.documents.getTeams(),
+                                scanner.nextInt())));
                 editTeams();
             }
             case 2 -> {
-                companyController.getMainTeam().deleteTeam();
+                companyController.getTeamController().deleteTeam();
                 teamOption();
             }
             case 3 -> teamOption();
@@ -207,22 +217,29 @@ public class Options implements Serializable {
             }
         }
     }
-
+    public static String printBoss(Employee boss) {
+        if (boss != null) {
+            return boss.getSurname() + " " + boss.getName();
+        } else {
+            return null;
+        }
+    }
     private void editTeams() {
         System.out.println("""
-                1: Изменить название отдела
-                2: Изменить руководителя отдела
-                3: Назад""");
+                 1-Изменить название отдела
+                 2-Изменить руководителя отдела
+                 3-Назад\
+                """);
         switch (scanner.nextInt()) {
             case 1 -> {
                 System.out.println("Введите название отдела:");
-                companyController.getMainTeam().editTeamName(scanner.nextLine());
+                companyController.getTeamController().editTeamName(scanner.nextLine());
                 System.out.println("Название отдела изменилось!");
                 editTeams();
             }
             case 2 -> {
                 System.out.println("Ведите номер сотрудника отдела, которого нужно назначить руководителем:");
-                companyController.getMainTeam().editTeamBoss(scanner.nextInt());
+                companyController.getTeamController().editTeamBoss(scanner.nextInt());
                 System.out.println("Новый руководитель!");
                 editTeams();
             }
@@ -236,103 +253,66 @@ public class Options implements Serializable {
 
     private void functionOption() {
         System.out.println("""
-                1: Список должностей
-                2: Создать должность
-                3: Назад
+                 1-Список должностей
+                 2-Создать должность
+                 3-Редактировать должность
+                 4-Удалить должность
+                 5-Назад\
                 """);
         switch (scanner.nextInt()) {
-            case 1 -> {
-                companyController.getReport().functions();
-                functionOption();
-            }
-            case 2 -> {
-                companyController.getMainFunction().createFunctionOption();
-                functionOption();
-            }
-            case 3 -> mainOption();
+            case 1 -> {companyController.getReport().functions();
+                functionOption();}
+            case 2 -> {companyController.getFunctionController().createFunctionOption();
+                functionOption();}
+            case 3 -> {companyController.getFunctionController().editFunction();
+                functionOption();}
+            case 4 -> {companyController.getFunctionController().deleteFunction();
+                functionOption();}
+            case 5 -> mainOption();
             default -> {
                 error();
                 functionOption();
-            }
-        }
-    }
-
-    private void functionEditOption() {
-        System.out.println("""
-                1: Редактировать должность
-                2: Удалить должность
-                3: Назад""");
-        switch (scanner.nextInt()) {
-            case 1 -> {
-                companyController.getMainFunction().editFunction();
-                functionOption();
-            }
-            case 2 -> {
-               companyController.getMainFunction().deleteFunction();
-                functionOption();
-            }
-            case 3 -> functionOption();
-            default -> {
-                error();
-                functionEditOption();
             }
         }
     }
 
     private void employeeOption() {
         System.out.println("""
-                1: Список сотрудников
-                2: Создать сотрудника
-                3: Назад""");
+                 1-Список сотрудников
+                 2-Создать сотрудника
+                 3-Редактировать сотрудника
+                 4-Удалить сотрудника
+                 5-Назад\
+                """);
         switch (scanner.nextInt()) {
-            case 1 -> {
-                companyController.getReport().employees();
-                employeeOption();
-            }
-            case 2 -> {
-                companyController.getMainEmployee().createEmployeeOption();
-                employeeOption();
-            }
-            case 3 -> mainOption();
-            default -> {
-                error();
-                employeeOption();
-            }
-        }
-    }
+            case 1 -> {companyController.getReport().employees();
+                employeeOption();}
+            case 2 -> {companyController.getEmployeeController().createEmployeeOption();
+                employeeOption();}
+            case 3 -> employeeEditOption();
 
-    private void employeeEdit2() {
-        System.out.println("""
-                1: Редактировать сотрудника
-                2: Удалить сотрудника
-                3: Назад""");
-        switch (scanner.nextInt()) {
-            case 1 -> {
-                companyController.getMainEmployee().editEmployee();
-                employeeOption();
-            }
-            case 2 -> {
-                companyController.getMainEmployee().deleteEmployee();
-                employeeOption();
-            }
-            case 3 -> functionOption();
+            case 4 -> {companyController.getEmployeeController().deleteEmployee();
+                employeeOption();}
+            case 5 -> mainOption();
             default -> {
                 error();
-                employeeEdit2();
-            }
+                employeeOption();}
         }
     }
 
     private void reportOption() {
         System.out.println("""
-                1: Структура организации(Отдел, Руководитель)
-                2: Средняя зарплата(По органицации|По отделам)
-                3: 10 самых дорогих сотрудников по ЗП
-                4: 10 самых преданных сотрудников по кол-ву лет в фирме
-                5: Назад""");
+                 1-Структура организации
+                 2-Средняя зарплата
+                 3-10 самых дорогих сотрудников по ЗП
+                 4-10 самых преданных сотрудников по кол-ву лет в фирме
+                 5-Назад\
+                """);
         switch (scanner.nextInt()) {
-            case 1 -> System.out.println("Структура организации");
-            case 2 -> System.out.println("Средняя зарплата");
+            case 1 -> companyController.getReport().companyStructure();
+            case 2 -> {companyController.getReport().averageSalary();
+                companyController.getReport().averageSalaryTeams();
+            }
             case 3 -> System.out.println("Топ 10 самых дорогих сотрудников");
             case 4 -> System.out.println("Топ 10 самых преданных сотрудников");
             case 5 -> mainOption();

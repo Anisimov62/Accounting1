@@ -1,8 +1,8 @@
 package org.example.companys;
 
-import java.io.Serializable;
+import javax.swing.*;
 
-public class Files implements Serializable{
+public class Files  {
 
     private Company company;
     public int companyFileName = 0;
@@ -13,9 +13,9 @@ public class Files implements Serializable{
     public Company getCompany() {
         return company;
     }
-
     public void setCompany(Company company) {
         Serialized.serialized(company, "Company" + company.hashCode());
         this.company = company;
     }
+
 }

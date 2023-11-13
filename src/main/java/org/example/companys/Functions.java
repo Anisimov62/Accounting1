@@ -8,27 +8,25 @@ public class Functions implements Serializable {
     private static int numberCreation;
     private String functionName;
 
-    public Functions(String postName) {
+    public Functions(String functionName) {
         numberCreation++;
-        this.functionName = postName;
+        this.functionName = functionName;
         this.functionNumber = numberCreation;
     }
 
     public int getNumberCreation() {
         return numberCreation;
     }
-
-    public String getPostName() {
+    public String getFunctionName() {
         return functionName;
     }
-
-    public void setPostName(String postName) {
+    public void setFunctionName(String functionName) {
         this.functionName = functionName;
     }
 
     @Override
     public String toString() {
-        return "\nID Должности: " + functionNumber +
+        return "\nНомер должности: " + functionNumber +
                 " Должность: " + functionName;
     }
 }

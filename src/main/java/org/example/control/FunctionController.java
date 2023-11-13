@@ -17,22 +17,15 @@ public class FunctionController implements Serializable {
     public Company getCompany() {
         return company;
     }
-
     public void setCompany(Company company) {
         this.company = company;
     }
 
     private void createFunction(String nameFunction) {
-        company.library.addFunction(new Functions(nameFunction));
+        company.documents.addFunctions(new Functions(nameFunction));
     }
-
-    public void deleteFunction() {
-
-    }
-
-    public void editFunction() {
-
-    }
+    public void deleteFunction() {}
+    public void editFunction() {}
 
     public void createFunctionOption() {
         System.out.println("Введите название должности:");

@@ -6,14 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="094040ba-a631-4cc6-b447-bde8cc446ab4" name="Changes" comment="Initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LogPass.txt" beforeDir="false" afterPath="$PROJECT_DIR$/LogPass.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Start.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mains/MainCompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/control/CompanyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mains/MainEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/control/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mains/MainFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/control/FunctionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mains/MainTeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/control/TeamController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mains/Options.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/control/Options.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mains/Report.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/control/Report.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mains/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/control/Search.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/access/LogPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/access/LogPassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/companys/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/companys/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/companys/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/companys/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/companys/Files.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/companys/Files.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/companys/Functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/companys/Functions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/companys/Leadership.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/companys/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/companys/Documents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/companys/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/companys/Team.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/control/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/control/CompanyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/control/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/control/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/control/FunctionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/control/FunctionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/control/Options.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/control/Options.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/control/Report.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/control/Report.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/control/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/control/Search.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/control/TeamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/control/TeamController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +42,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2XaXa7gHMjbuCq0tBZXRCb12dz7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -42,17 +58,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/Accounting&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/User/IdeaProjects/Accounting/src/main/java/org/example/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Accounting",
+    "onboarding.tips.debug.path": "C:/Users/User/IdeaProjects/Accounting/src/main/java/org/example/Main.java",
+    "settings.editor.selected.configurable": "inlay.hints"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\Accounting\src\main\java\org\example\mains" />
@@ -78,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699280796315</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial commit">
+      <created>1699458117669</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699458117669</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

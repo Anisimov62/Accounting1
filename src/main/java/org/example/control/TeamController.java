@@ -19,7 +19,6 @@ public class TeamController implements Serializable {
     public Company getCompany() {
         return company;
     }
-
     public void setCompany(Company company) {
         this.company = company;
     }
@@ -27,18 +26,18 @@ public class TeamController implements Serializable {
     public Team getTeam() {
         return team;
     }
-
     public void setTeam(Team team) {
         this.team = team;
     }
 
     public void createTeam(String nameTeam) {
         Team team = new Team(nameTeam);
-        company.library.addTeam(team);
+
+        company.documents.addTeam(team);
             }
 
     public void deleteTeam() {
-        company.library.deleteTeam(this.team.getTeamNumber() - 1);
+        company.documents.deleteTeam(this.team.getTeamNumber() - 1);
     }
 
     public void editTeamName(String name) {
